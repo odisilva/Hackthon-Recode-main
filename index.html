@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOS Enchentes RS - Voluntariado</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#sobre" aria-label="Ir para a seção Sobre">Sobre</a>
+          </li>
+          <li>
+            <a href="#voluntariado" aria-label="Ir para a seção Voluntariado"
+              >Voluntariado</a
+            >
+          </li>
+          <li>
+            <a
+              href="#materiais"
+              aria-label="Ir para a seção Materiais Educativos"
+              >Materiais Educativos</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="sobre">
+      <h2>Sobre o SOS RS</h2>
+      <p>
+        O SOS RS foi criado com o propósito de apoiar as comunidades afetadas
+        por enchentes no Rio Grande do Sul. Nossa missão é realizar ações de
+        socorro e assistência em situações de emergência, minimizando os
+        impactos das enchentes. Queremos ser um símbolo de solidariedade e ajuda
+        em tempos de crise, promovendo o fortalecimento do espírito comunitário.
+      </p>
+    </section>
+    <section id="voluntariado" class="volunteer-signup">
+      <h2>Inscreva-se como Voluntário</h2>
+      <form action="#" method="post">
+        <label for="name">Nome Completo:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Digite seu nome"
+          required
+          aria-label="Campo para inserir o nome completo"
+        />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Digite seu email"
+          required
+          aria-label="Campo para inserir o email"
+        />
+        <label for="phone">Telefone:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="(XX) XXXXX-XXXX"
+          required
+          aria-label="Campo para inserir o telefone"
+          oninput="formatPhone(this)"
+        />
+        <label for="action">Área de atuação:</label>
+        <select
+          id="action"
+          name="action"
+          required
+          aria-label="Seleção da área de atuação"
+        >
+          <option value="" disabled selected>Selecione...</option>
+          <option value="enfermagem">Enfermagem</option>
+          <option value="socorrista">Socorrista</option>
+          <option value="logistica">Logística</option>
+          <option value="motorista">Motorista</option>
+          <option value="comunicacao">Comunicação</option>
+          <option value="outros">Outros</option>
+        </select>
+        <label for="availability">Disponibilidade:</label>
+        <select
+          id="availability"
+          name="availability"
+          required
+          aria-label="Seleção de disponibilidade"
+        >
+          <option value="" disabled selected>Selecione...</option>
+          <option value="morning">Manhã</option>
+          <option value="afternoon">Tarde</option>
+          <option value="night">Noite</option>
+          <option value="full-time">Integral</option>
+        </select>
+        <label for="mesoregion">Mesorregião para atuação:</label>
+        <select
+          id="mesoregion"
+          name="mesoregion"
+          required
+          aria-label="Seleção de mesorregião"
+          onchange="updateMicroregions()"
+        >
+          <option value="" disabled selected>
+            Selecione uma mesorregião...
+          </option>
+          <option value="metropolitana_de_porto_alegre">
+            Metropolitana de Porto Alegre
+          </option>
+          <option value="nordeste_riograndense">Nordeste Rio-Grandense</option>
+          <option value="noroeste_riograndense">Noroeste Rio-Grandense</option>
+          <option value="centro_ocidental_riograndense">
+            Centro Ocidental Rio-Grandense
+          </option>
+          <option value="centro_oriental_riograndense">
+            Centro Oriental Rio-Grandense
+          </option>
+          <option value="sudoeste_riograndense">Sudoeste Rio-Grandense</option>
+          <option value="sudeste_riograndense">Sudeste Rio-Grandense</option>
+        </select>
+        <label for="microregion">Microrregião para atuação:</label>
+        <select
+          id="microregion"
+          name="microregion"
+          required
+          aria-label="Seleção de microrregião"
+        >
+          <option value="" disabled selected>
+            Selecione uma microrregião...
+          </option>
+        </select>
+        <button type="submit" aria-label="Enviar inscrição como voluntário">
+          Enviar Inscrição
+        </button>
+      </form>
+    </section>
+    <section id="materiais">
+      <h2>Materiais Educativos</h2>
+      <p>
+        Acesse nossos materiais sobre medidas preventivas, simulações de
+        evacuação e cursos rápidos sobre o que fazer antes, durante e depois das
+        enchentes.
+      </p>
+      <div class="material-buttons">
+        <a
+          href="./Materiais/Conhecer_para_Prevenir_3ed_2016.pdf"
+          target="_blank"
+          class="button"
+          aria-label="Abrir o material de Prevenção em uma nova aba"
+          >Prevenção</a
+        >
+        <a
+          href="./Materiais/EaDVoluntariosAula2Nocoesdeprimeirossocorros.pdf"
+          target="_blank"
+          class="button"
+          aria-label="Abrir o material de Primeiros Socorros em uma nova aba"
+          >Primeiros Socorros</a
+        >
+      </div>
+    </section>
+    <footer>
+      <p>
+        Juntos podemos fazer a diferença. Entre em contato para mais
+        informações.
+      </p>
+      <p><strong>Contatos de Emergência:</strong></p>
+      <p>Defesa Civil: 199 | Bombeiros: 193 | SAMU: 192</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

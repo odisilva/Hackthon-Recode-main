@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+  line-height: 1.6; /* Melhora a legibilidade */
+}
+
+header {
+  background: url("./Imagens/cabeçalho.png") center / contain no-repeat;
+  min-height: 50vh;
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+header nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+  flex-wrap: wrap; /* Permite que os itens do menu quebrem linha */
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #0aa14f;
+  font-weight: bold;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+  text-decoration: underline;
+}
+
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #0aa14f;
+  font-size: 1.5rem; /* Usando rem para escalonamento */
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #0aa14f;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+form button:hover,
+form button:focus {
+  background-color: #092919;
+}
+
+.material-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.material-buttons .button {
+  flex: 1;
+  padding: 10px 15px;
+  background-color: #0aa14f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.material-buttons .button:hover,
+.material-buttons .button:focus {
+  background-color: #092919;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #0aa14f;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Media Queries para dispositivos menores */
+@media (max-width: 768px) {
+  header {
+    min-height: 200px;
+  }
+
+  header nav {
+    height: 40px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    margin: 5px 0;
+  }
+
+  .header-text {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  section {
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  form button {
+    font-size: 1rem;
+  }
+}
