@@ -19,7 +19,7 @@ Este repositório contém o código-fonte da página web desenvolvida pela Equip
 ## Deploy
 
 A página está disponível para ser acessada em:
-https://alan-oliveir.github.io/Hackthon-Recode
+https://odisilva.github.io/Hackthon-Recode-main/
 
 ## Tecnologias Utilizadas 🛠
 
